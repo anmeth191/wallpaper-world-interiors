@@ -201,6 +201,9 @@ big-screen
     .showcase__header__navbar--logo {
       float: left;
       margin-top: 1rem; }
+      @media (max-width: 37.5em) {
+        .showcase__header__navbar--logo {
+          display: none; } }
       .showcase__header__navbar--logo img {
         object-fit: contain;
         height: 5rem;

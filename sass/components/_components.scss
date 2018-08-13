@@ -43,7 +43,9 @@
             float:left;
             margin-top:1rem;
             
-          
+            @include responsive(phone){
+                display: none;
+            }
 
             & img {
                 object-fit: contain;
@@ -52,6 +54,7 @@
 
                 @include responsive(tab-landscape){height:4rem;}
                 @include responsive(tab-portrait){height:4rem;}
+                
             }
              
          
