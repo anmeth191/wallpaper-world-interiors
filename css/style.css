@@ -376,16 +376,16 @@ big-screen
     width: 100%; }
     .sidenav-container .sidenav-list li {
       list-style: none;
-      padding: 2rem;
-      transition: background 0.2s ease-in; }
+      padding: 2rem; }
       .sidenav-container .sidenav-list li a {
         color: #ffffff;
         font-size: 2.2rem;
         font-family: "Roboto", sans-serif;
-        padding: 1.2rem;
-        text-decoration: none; }
-      .sidenav-container .sidenav-list li:hover {
-        background: #4db6ac; }
+        padding: 5% 30%;
+        text-decoration: none;
+        transition: background 0.2s ease-in; }
+        .sidenav-container .sidenav-list li a:hover {
+          background: #4db6ac; }
 
 .open {
   animation-name: sideNav;
