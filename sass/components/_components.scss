@@ -8,7 +8,7 @@
 
 
 .showcase{
-    background-image:linear-gradient(to right bottom , rgba($p-light, 0.5) , rgba($p-dark , 0.3)) ,url('../../assets/images/showcase2.jpeg');
+    background-image:linear-gradient(to right bottom , rgba($p-light, 0.5) , rgba($p-dark , 0.3)) ,url('../assets/images/showcase2.jpeg');
     background-position:top;
     background-size: cover;
     background-attachment: fixed;  
@@ -325,7 +325,7 @@ z-index: 10;
   &__image{
       background-position:center;
       background-size: cover;  
-      background-image:linear-gradient(to right bottom , rgba($color-primary , 0.4) , rgba($p-dark , 0.5)) ,  url('../../assets/images/story4.jpg');
+      background-image:linear-gradient(to right bottom , rgba($color-primary , 0.4) , rgba($p-dark , 0.5)) ,  url('../assets/images/story4.jpg');
       box-shadow: 10px 10px  30px -12px $p-dark;
       grid-column:2/4;
       max-height:100%;
