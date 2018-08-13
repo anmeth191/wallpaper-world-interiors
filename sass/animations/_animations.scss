@@ -1,0 +1,31 @@
+@keyframes moveIn {
+    0%{left:-10rem}
+    70%{left:1rem;}
+    100%{left:0}
+}
+
+@keyframes moveRight {
+    0%{right:-10rem}
+    70%{right:1rem;}
+    100%{right:0}
+}
+
+@keyframes inUp{
+ 0%{opacity:0;top:5rem;}
+ 100%{opacity:1;top:0}
+}
+
+@keyframes fadeIn{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+
+@keyframes sideNav {
+    0%{width:0;}
+    100%{width:70%}
+}
+
+@keyframes sideNavout {
+    0%{width:70%;}
+    100%{width:0}
+}

@@ -1,0 +1,21 @@
+@import "../abstracts/variables";//contains variables
+
+.btn{
+    margin-top:2rem;
+    padding:2rem 3.2rem;
+    color:$font-color;
+}
+
+.btn-services{
+    margin-top:0rem;
+    padding:2rem 3.2rem;
+    color:$font-color;
+    background: transparent;
+    border:0.2rem solid $font-color;
+
+}
+
+.btn-gallery{
+    background:$p-dark;
+    border:0.2rem solid white;
+}

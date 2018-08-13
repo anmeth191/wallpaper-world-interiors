@@ -1,0 +1,776 @@
+@import "../abstracts/variables";//contains variables
+@import "../abstracts/mixins";//contains variables
+
+.class .bar1 {transform:rotate(45deg)}
+.class .bar2{opacity:0;}
+.class .bar3 {transform:rotate(-45deg) translate(10px , -11px);}
+
+
+
+.showcase{
+    background-image:linear-gradient(to right bottom , rgba($p-light, 0.6) , rgba($p-dark , 0.5)) ,url('../assets/images/showcase2.jpeg');
+    background-position:top;
+    background-size: cover;
+    background-attachment: fixed;  
+    position:relative;
+    height:100vh;
+ 
+    
+    
+
+    &__header{
+        background:transparent;
+        margin:0 auto;
+        left:0;
+        position:fixed;
+        top:0;
+        transition: background 0.2s ease-in;
+        width:100%;
+        z-index: 10;
+
+       @include responsive(tab-landscape){padding:1rem;}
+        @include responsive(tab-portrait){padding:1rem;}
+        @include responsive(phone){padding:1rem;}
+
+
+&__navbar{
+    margin:0 auto;
+    width:80%;
+    @include responsive(tab-landscape){width:90%;}
+    @include responsive(tab-portrait){width:90%;}
+}
+        &__navbar--logo{
+            float:left;
+            margin-top:1rem;
+            
+
+
+            & img {
+                object-fit: contain;
+                height:5rem;
+                width: 100%;
+
+                @include responsive(tab-landscape){height:4rem;}
+                @include responsive(tab-portrait){height:4rem;}
+            }
+             
+         
+        }//end navbar logo
+        
+        
+        &__navbar--burger{
+            background:transparent;
+            display:none;
+            float:right;
+            padding:0.5rem;
+
+            &:hover{cursor: pointer;}
+
+            
+              & .bar1 , & .bar2 , & .bar3{
+                  background:#fff;
+                height:3px;
+                margin:4px;
+                transition: all 0.2s ease-in;
+                width:40px;}
+
+             
+            @include responsive(tab-portrait){ display: block; margin-top:0.8rem;padding:1rem 3rem;  }
+              @include responsive(phone){display: block;margin-top:0.8rem;}
+
+}
+        &__navbar--links{
+            float:right;
+            margin-top:0.5rem;
+            
+               
+          @include responsive(tab-portrait){ display:none; } 
+          @include responsive(phone){display:none;}
+        
+         
+           & li {
+               float:left;
+               font-size:1.5rem;
+               list-style: none;
+               padding:2rem;
+               transition:background 0.2s ease-in;
+             
+               @include responsive(tab-landscape){padding:1rem;}
+
+               &:hover {background:$font-color-title;cursor: pointer;}
+               & a:link , & a:visited{
+                   color:$font-color;
+                   font-weight:$weight;
+                   font-family:$content-font;
+                   padding:1.5rem;
+                   text-decoration: none;
+
+                   @include responsive(tab-landscape){padding:0.5rem;}
+
+               }
+            }//end of navbar li
+         
+                                        
+
+        } //end navbar
+    }
+
+    &__clear {
+        clear: both;
+      
+    }
+
+    &__content{
+        left:50%;
+        position:absolute;
+        top:50%;
+        transform: translate(-50% , -50%);
+        text-align: center;
+
+        @include responsive(tab-landscape){width:100%;}
+        @include responsive(tab-portrait){width:100%;}
+        @include responsive(phone){ width:100%;}
+
+       
+        
+    
+    
+         
+        &--title{
+            animation-name:moveIn;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            color:$font-color;
+            font-size: 5rem;
+            font-weight:$weight;
+            letter-spacing: .5rem;
+            position: relative;
+
+          
+        @include responsive(tab-landscape){font-size: 4.5rem;}
+          @include responsive(tab-portrait){font-size: 4.1rem;}
+                  @include responsive(phone){font-size: 4rem;}
+          
+        }
+      
+        &--subtitle{
+            animation-name:inUp;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            color:$font-color;
+            font-size:3rem;
+            font-weight:$weight;
+            position:relative;
+            @include responsive(tab-landscape){font-size: 2rem;}
+            @include responsive(tab-portrait){font-size:1.8rem;}
+            @include responsive(phone){font-size:1.8rem;}
+
+            
+        }
+
+        &--button{
+            animation-name: fadeIn;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-fill-mode: both;
+            border:none;
+            background:$p-dark;
+            box-shadow:$shadow;
+            display: inline-block;
+            font-family: $content-font;
+            font-size: 1.5rem;   
+            opacity: 0;
+            position:relative;
+            transition:all 0.1s ease-in;
+            text-decoration:none;
+
+            &::after {
+                content:'';
+                background:$p-dark;
+                left:0;
+                position:absolute;
+                 padding:2.7rem 6.5rem;
+                 top:0;
+                 transition: transform 0.2s ease-in , opacity 0.3s ease-in;
+                 z-index: -1;
+                
+                @include responsive(phone){padding:3rem 6.5rem;}
+                }
+
+                &:hover{cursor:pointer; transform:translateY(-0.5rem)}
+                &:hover::after{opacity:0;transform:scale(1.4);}
+
+ }
+    }//end of content
+}//end first sections
+
+.sidenav {
+background: rgba($p-dark, 0.7);
+backface-visibility: hidden;
+display:grid;
+height:100vh;
+left:0;
+position:fixed;
+top:0;
+width:0;
+z-index: 10;
+
+
+
+
+&-container{
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+    display:none;
+    height:auto;
+    left:50%;
+    position: absolute;
+    top:50%;
+    text-align: center;
+    transform: translate(-50% , -50%);
+    width:100%;
+    
+
+    & .sidenav-list{
+
+        & li {list-style: none;padding:2rem;   
+
+            transition:background 0.2s ease-in;
+
+        
+        & a {color:$font-color;
+            font-size:2.2rem; 
+            font-family: $content-font; 
+            padding:1.2rem;
+            text-decoration: none;
+            
+
+         }
+       
+         &:hover{background:$font-color-title;}
+        }
+    }
+}
+
+}
+
+.open{
+    animation-name:sideNav; 
+    animation-duration: 0.5s;
+    animation-fill-mode: both;  
+    width:70%; 
+}
+
+.story{
+    background-color:$color-primary;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: minmax(20rem , auto);
+    grid-gap:1.5rem;
+    height:50rem;
+    padding:2rem;
+    
+    @include responsive(tab-landscape){
+        height:auto;
+        padding:4rem 1rem;
+    }
+
+       
+    @include responsive(tab-portrait)
+    {  
+        grid-template-columns: 1fr 1fr;
+        height:auto;
+        padding:2rem 1rem;
+    }
+    
+    @include responsive(phone)
+    {   display:block;
+        height:auto;
+        padding:2rem 1rem;
+    }
+
+     
+
+  &__content{
+      align-self: center;
+      backface-visibility: hidden;
+      color:$font-color;
+      grid-column:1/2;
+      padding:2rem;
+      position: relative;
+      @include animation-properties;
+       
+      @include responsive(tab-landscape){padding:1rem;}
+      
+
+      @include responsive(tab-portrait){
+        margin-bottom:0.5rem;
+        padding:0;
+    }
+
+      @include responsive(phone){
+          margin-bottom:0.5rem;
+          padding:0;
+      }
+  }
+
+  &__image{
+      background-position:center;
+      background-size: cover;  
+      background-image:linear-gradient(to right bottom , rgba($color-primary , 0.5) , rgba($p-dark , 0.5)) ,  url('../../assets/images/story4.jpg');
+      box-shadow: 10px 10px  30px -12px $p-dark;
+      grid-column:2/4;
+      max-height:100%;
+      max-width:100%;
+      opacity:0;
+    @include animation-properties;
+       
+
+  @include responsive(tab-portrait){height:30rem;}
+    @include responsive(phone){height:40rem;}
+  }
+}
+
+
+.unique{
+  
+    background-color:$color-primary;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:1.5rem;
+    height:50rem;
+    padding-bottom:2rem;
+     
+    @include responsive (tab-landscape){padding:1rem;}
+    @include responsive(tab-portrait){
+       
+        grid-template-columns: 1fr 1fr;
+        height:auto;
+        padding:1rem;
+        
+     }
+
+    @include responsive(phone){
+       display:block;
+       height:auto;
+       padding:2rem 1rem;
+    }
+
+
+    &__image{
+
+        background-image: linear-gradient(to right bottom , rgba($color-primary , 0.5) , rgba($p-dark , 0.5)) , url('../../assets/images/unique.jpeg');
+        background-position:center;
+        background-size: cover; 
+        background-repeat: no-repeat;
+        box-shadow: 10px 10px  30px -12px $p-dark;
+        grid-column:1/3;
+        
+           max-height:100%;
+           max-width:100%;
+            opacity:0;
+           @include animation-properties;
+
+        @include responsive(tab-portrait){ height:30rem;grid-column: 1/2;}
+        @include responsive(phone){height:40rem;}
+        
+
+    }
+
+   &__content{
+       align-self: center;
+       color:$font-color;
+       grid-column:3/4;
+       position: relative;
+       @include animation-properties;
+
+
+       @include responsive(tab-portrait){grid-column: 2/3;align-self: start;}
+       @include responsive(phone){ margin-top:1rem;}
+
+   }
+
+}
+
+.services{
+
+background:$p-dark;
+color: $font-color;
+display: grid;
+height:60rem;
+grid-template-columns: repeat(3,1fr);
+grid-gap:1.5rem;
+padding:3rem;
+@include animation-properties;
+
+
+@include responsive(tab-portrait){
+grid-gap:0.5rem;
+grid-template-columns: 1fr 1fr;
+height:auto;
+padding:3rem;
+}
+
+@include responsive(phone){
+    display:block;
+    height:auto;
+}
+
+
+ &__title{
+     align-self: center;
+     grid-column: 1/4;
+ }
+
+&__flooring , &__window , &__wallpaper{
+    text-align: center;
+    padding: 0 2rem;
+    position: relative;
+    @include animation-properties; 
+
+    @include responsive(phone){margin-bottom:3rem;padding:0;}
+}
+
+&__flooring { @include responsive(tab-portrait){grid-column: 1/5;}&--content{text-align: left;}}
+&__window { &--content{text-align: left;}}
+&__wallpaper { &--content{text-align: left;}}
+}
+
+.span{
+    background-image: linear-gradient(to right , rgba($color-primary , 0.5) , rgba($p-light , 0.8)) , url('../../assets/images/span-large2x.jpeg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display:grid;
+    grid-template-columns: 1fr 1fr; 
+    height:70rem;
+    margin:0 auto;
+  
+@include responsive(tab-portrait){height:auto;padding:2rem;display:block;}
+ @include responsive(phone){display:block;height:auto;}
+
+    & .messageCompany{
+        align-self: center;
+        border-right:0.2rem solid $font-color;
+        color:$font-color;
+        opacity:0;
+        padding:4rem;
+        @include animation-properties;
+        
+        @include responsive(tab-portrait){margin:15rem auto;border:none;}
+        @include responsive(phone){ 
+            border:none;
+            margin:15rem auto;
+            
+            width:80%;
+        }
+
+        &--title{
+            background:$p-dark;
+            padding:0.5rem;
+        }
+
+        & .btn-gallery {
+            border:none;
+            box-shadow:$shadow; 
+             position: relative;
+             transition:transform 0.1s ease-in;
+
+            &::after{
+                content:"";
+                background:$p-dark;
+             height:6rem;
+             left:0;
+             position: absolute;
+             top:0;
+             transition: transform 0.2s ease-in , opacity 0.3s ease-in;
+             width:10.5rem;
+             z-index: -1;
+            }
+        &:hover{cursor:pointer;transform:translateY(-0.5rem)}
+        &:hover::after{transform:scale(1.4); opacity:0;}
+        }
+    }
+
+    & .gallery {
+         position: relative;
+         height:auto;
+         
+
+         @include responsive(tab-portrait){display:none;}
+
+         @include responsive(phone){display:none;}
+        & img {
+            box-shadow: $shadow;
+            height:30rem;
+            object-fit: cover;
+            position: absolute;
+            width:30rem;
+
+           
+           @include responsive(tab-landscape){height:40%;}
+           @include responsive(tab-portrait){height:80%;}
+        }
+
+        & .img1{top:25%; left:15%; 
+            
+           @include responsive(tab-landscape){top:10%;left:5%;}
+            @include responsive(tab-portrait){display:none}}
+
+        & .img2{top:50%; left:30%;
+            @include responsive(tab-landscape){top:45%;left:25%;}
+            @include responsive(tab-portrait){display:none}}
+
+        & .img3{top:35%; left:55%; 
+            @include responsive(tab-landscape){display:none;}
+
+            @include responsive(tab-portrait){display:block;left:50%;top:50%; transform:translate(-35%,-50%);}}
+    }
+}
+
+.testimonials {
+
+    align-items:center;
+    background:$color-primary;
+    color:$font-color;
+    display: grid;
+    grid-gap:3rem;
+    height:auto;
+    justify-items: center;
+   padding:5rem;
+
+&__users {
+background:$p-dark;
+outline: 0.2rem solid $font-color-title;
+outline-offset: 1rem;
+padding:4rem;
+transform: skew(-15deg);
+width:60%;
+margin:1rem auto;
+
+@include responsive(tab-landscape){
+    padding:3rem;
+    margin:1rem auto;
+    width:80%;
+}
+ 
+@include responsive(tab-portrait){
+    transform:skew(0);
+    width:90%;
+    margin:1rem 0;
+}
+@include responsive(phone){transform:skew(0);width:90%;}
+
+& > * {
+    transform: skew(15deg);
+    @include responsive(tab-portrait){
+        transform:skew(0);
+    }
+
+    @include responsive(phone){
+        transform:skew(0);
+    }
+}
+&:nth-child(3) > &--figure {
+float:right;   
+}
+
+
+&:nth-child(3) > &--first > * {
+    text-align: right;
+
+    }
+
+&--figure{    
+float: left;
+shape-outside: circle();
+margin-right:2rem;
+
+    & img{
+        height:10rem;
+        width:10rem;
+        object-fit: cover;
+        border-radius: 50%;
+    } 
+}//end of figure
+
+&--first{
+
+    font-size: 1.3rem;
+    &--title{
+        text-align: left;
+        font-size: 2.7rem;
+
+
+    }
+
+    @include responsive(phone){
+        font-size:1.7rem;
+    }
+}
+
+}
+}
+
+
+
+
+.contact {
+    background:$p-dark;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap:2.5rem;
+height:auto;
+padding:10rem;
+
+@include responsive(tab-landscape){
+    height:auto;
+    padding:1rem;
+    }
+
+@include responsive(tab-portrait){
+    height:auto;
+    padding:1rem;
+    }
+    
+
+@include responsive(phone){
+height:auto;
+padding:1rem;
+}
+
+    
+& .contactForm{
+    width:80%;
+    margin:0 auto;
+   
+    @include responsive(tab-landscape)
+    {width:90%;
+     margin:3rem auto;   
+  
+    }
+
+
+    @include responsive(tab-portrait)
+    {width:90%;
+     margin:3rem auto;   
+  
+    }
+    @include responsive(phone)
+    {width:80%;
+     margin:3rem auto;   
+  
+    }
+   
+    &--title{
+        color:$font-color;
+    }
+    & .form-group{
+        padding:1rem;
+        color:$font-color;
+
+        & label {
+            font-size: 1.5rem;
+            font-family: $content-font;
+            letter-spacing:0.1rem;
+
+        }
+
+        & input[type="text"] , & input[type="email"] {
+            width:100%;
+            height:3rem;
+            border:none;
+            transition: border 0.2s ease-in;
+
+        }
+
+        & textarea{
+            width:100%;
+            border:none;
+        }
+
+        & .form-button{
+            background:$p-light;
+            border:0.2rem solid $font-color;
+
+        
+
+            @include responsive(tab-portrait){
+                width:100%;
+            }
+
+            @include responsive(phone){
+                width:100%;
+            }
+        }
+    }
+}
+}
+
+
+.footer{
+
+  & .mainfooter{
+      display:grid;
+      background:$color-primary;
+      grid-template-columns: 1fr 1fr;
+      padding:5rem;
+      color:$font-color;
+
+      @include responsive(tab-portrait){
+        text-align: center;
+        display:block;
+     }
+
+      @include responsive(phone){
+         text-align: center;
+         display:block;
+      }
+
+      &__description{
+        justify-self: center;
+        font-family: $content-font;
+
+      }
+
+      &__links {
+          justify-self: center;
+         & ul li{list-style: none;padding:0.5rem;
+
+            @include responsive(tab-portrait){
+             
+                display:none;
+             }
+         @include responsive(phone){
+             display:none;
+         }
+
+        }
+        
+         &--link{
+            text-decoration: none;
+            color:$font-color;
+            font-size: 1.8rem;
+            font-family: $content-font;
+
+
+           
+        }
+      }
+  }
+
+  & .secondaryfooter{
+      background:$p-dark;
+      padding:2rem;
+      color:white;
+      text-align: center;
+
+      &--title{
+          font-weight: $weight;
+          font-family: $content-font;
+
+      }
+  }
+
+}

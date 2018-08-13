@@ -1,0 +1,19 @@
+{
+  "name": "proyecto-wpw",
+  "version": "1.0.0",
+  "description": "proyect for wallpaperworld",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Angel Rivera",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-sass": "^4.0.1",
+    "jquery": "^3.3.1"
+  },
+  "dependencies": {
+    "material-design-icons": "^3.0.1",
+    "materialize-css": "^1.0.0-rc.2"
+  }
+}
