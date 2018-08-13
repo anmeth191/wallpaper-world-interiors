@@ -478,7 +478,7 @@ big-screen
       height: auto;
       padding: 2rem 1rem; } }
   .unique__image {
-    background-image: linear-gradient(to right bottom, rgba(55, 71, 79, 0.5), rgba(16, 32, 39, 0.5)), url("../../assets/images/unique.jpeg");
+    background-image: linear-gradient(to right bottom, rgba(55, 71, 79, 0.5), rgba(16, 32, 39, 0.5)), url("../assets/images/unique.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -563,7 +563,7 @@ big-screen
     text-align: left; }
 
 .span {
-  background-image: linear-gradient(to right, rgba(55, 71, 79, 0.5), rgba(98, 114, 123, 0.8)), url("../../assets/images/span-large2x.jpeg");
+  background-image: linear-gradient(to right, rgba(55, 71, 79, 0.5), rgba(98, 114, 123, 0.8)), url("../assets/images/span-large2x.jpeg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
