@@ -166,6 +166,7 @@ big-screen
 
 .showcase {
   background-image: linear-gradient(to right bottom, rgba(98, 114, 123, 0.5), rgba(16, 32, 39, 0.3)), url("../assets/images/showcase2.jpeg");
+  -webkit-background-image: linear-gradient(to right bottom, rgba(98, 114, 123, 0.5), rgba(16, 32, 39, 0.3)), url("../assets/images/showcase2.jpeg");
   background-position: top;
   background-size: cover;
   background-attachment: fixed;
@@ -451,6 +452,7 @@ big-screen
     background-position: center;
     background-size: cover;
     background-image: linear-gradient(to right bottom, rgba(55, 71, 79, 0.4), rgba(16, 32, 39, 0.5)), url("../assets/images/story4.jpg");
+    -webkit-background-image: linear-gradient(to right bottom, rgba(55, 71, 79, 0.4), rgba(16, 32, 39, 0.5)), url("../assets/images/story4.jpg");
     box-shadow: 10px 10px 30px -12px #102027;
     grid-column: 2/4;
     max-height: 100%;
@@ -489,6 +491,7 @@ big-screen
       padding: 2rem; } }
   .unique__image {
     background-image: linear-gradient(to right bottom, rgba(55, 71, 79, 0.4), rgba(16, 32, 39, 0.5)), url("../assets/images/unique.jpeg");
+    -webkit-background-image: linear-gradient(to right bottom, rgba(55, 71, 79, 0.4), rgba(16, 32, 39, 0.5)), url("../assets/images/unique.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -572,6 +575,7 @@ big-screen
 
 .span {
   background-image: linear-gradient(to right, rgba(55, 71, 79, 0.5), rgba(98, 114, 123, 0.8)), url("../assets/images/span-large2x.jpeg");
+  -webkit-background-image: linear-gradient(to right, rgba(55, 71, 79, 0.5), rgba(98, 114, 123, 0.8)), url("../assets/images/span-large2x.jpeg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
