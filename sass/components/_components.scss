@@ -43,7 +43,7 @@
             float:left;
             margin-top:1rem;
             
-
+          
 
             & img {
                 object-fit: contain;
@@ -60,7 +60,7 @@
         
         &__navbar--burger{
             background:transparent;
-            display:none;
+            opacity:0;
             float:right;
             padding:0.5rem;
 
@@ -75,8 +75,8 @@
                 width:40px;}
 
              
-            @include responsive(tab-portrait){ display: block; margin-top:0.8rem;padding:1rem 3rem;  }
-              @include responsive(phone){display: block;margin-top:0.8rem;}
+            @include responsive(tab-portrait){ opacity:1; margin-top:0.8rem;padding:1rem 3rem;  }
+              @include responsive(phone){opacity:1;margin-top:0.8rem;}
 
 }
         &__navbar--links{

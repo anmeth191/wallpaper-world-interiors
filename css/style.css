@@ -213,7 +213,7 @@ big-screen
             height: 4rem; } }
     .showcase__header__navbar--burger {
       background: transparent;
-      display: none;
+      opacity: 0;
       float: right;
       padding: 0.5rem; }
       .showcase__header__navbar--burger:hover {
@@ -226,12 +226,12 @@ big-screen
         width: 40px; }
       @media (max-width: 56.25em) {
         .showcase__header__navbar--burger {
-          display: block;
+          opacity: 1;
           margin-top: 0.8rem;
           padding: 1rem 3rem; } }
       @media (max-width: 37.5em) {
         .showcase__header__navbar--burger {
-          display: block;
+          opacity: 1;
           margin-top: 0.8rem; } }
     .showcase__header__navbar--links {
       float: right;
