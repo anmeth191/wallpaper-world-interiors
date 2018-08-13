@@ -361,7 +361,9 @@ big-screen
   position: fixed;
   top: 0;
   width: 0;
-  z-index: 10; }
+  z-index: 10;
+  animation-duration: 0.2s;
+  animation-fill-mode: both; }
   .sidenav-container {
     animation-duration: 1s;
     animation-delay: 0.5s;
@@ -392,6 +394,12 @@ big-screen
   animation-duration: 0.5s;
   animation-fill-mode: both;
   width: 70%; }
+
+.close {
+  animation-name: sideNavout;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  width: 0; }
 
 .story {
   background-color: #37474f;

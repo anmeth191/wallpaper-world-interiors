@@ -13,16 +13,24 @@ let burger = document.querySelector('#burger');
 
 burger.addEventListener('click',()=> {
  burger.classList.toggle('class');
- sidenav.classList.toggle('open');
- if(sidenav.className == 'sidenav'){
-     sidenavcontainer.style.display="none";
- }
- else{
+ //sidenav.classList.remove('close');
+ //sidenav.classList.add('open');
+
+ if(burger.classList == 'showcase__header__navbar--burger'){
+    
+  
+    sidenavcontainer.style.display="none";
+    sidenav.classList.remove('close');
+    sidenav.classList.add('close');
+}
+else  if(burger.classList =='showcase__header__navbar--burger class'){
+    {
+    sidenav.classList.remove('close');
+    sidenav.classList.add('open');
     sidenavcontainer.style.display="grid";
     sidenavcontainer.style.animationName="fadeIn";
-
- }
-
+}
+}
 })
 
 
