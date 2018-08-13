@@ -414,7 +414,7 @@ big-screen
     .story {
       display: block;
       height: auto;
-      padding: 2rem 1rem; } }
+      padding: 2rem; } }
   .story__content {
     align-self: center;
     backface-visibility: hidden;
@@ -463,7 +463,7 @@ big-screen
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
   height: 50rem;
-  padding-bottom: 2rem; }
+  padding: 2rem; }
   @media (max-width: 75em) {
     .unique {
       padding: 1rem; } }
@@ -502,6 +502,7 @@ big-screen
     align-self: center;
     color: #ffffff;
     grid-column: 3/4;
+    padding: 2rem;
     position: relative;
     animation-duration: 0.8s;
     animation-fill-mode: both;
@@ -555,12 +556,6 @@ big-screen
   @media (max-width: 56.25em) {
     .services__flooring {
       grid-column: 1/5; } }
-  .services__flooring--content {
-    text-align: left; }
-  .services__window--content {
-    text-align: left; }
-  .services__wallpaper--content {
-    text-align: left; }
 
 .span {
   background-image: linear-gradient(to right, rgba(55, 71, 79, 0.5), rgba(98, 114, 123, 0.8)), url("../assets/images/span-large2x.jpeg");
@@ -717,22 +712,25 @@ big-screen
         .testimonials__users > * {
           transform: skew(0); } }
     .testimonials__users:nth-child(3) > .testimonials__users--figure {
-      float: right; }
+      float: right;
+      margin-right: 0;
+      margin-left: 5rem; }
     .testimonials__users:nth-child(3) > .testimonials__users--first > * {
       text-align: right; }
     .testimonials__users--figure {
       float: left;
       shape-outside: circle();
-      margin-right: 2rem; }
+      margin-right: 5rem; }
       .testimonials__users--figure img {
         height: 10rem;
         width: 10rem;
         object-fit: cover;
         border-radius: 50%; }
     .testimonials__users--first {
+      text-align: left;
       font-size: 1.3rem; }
       .testimonials__users--first--title {
-        text-align: left;
+        text-align: center;
         font-size: 2.7rem; }
       @media (max-width: 37.5em) {
         .testimonials__users--first {

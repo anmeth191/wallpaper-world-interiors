@@ -292,7 +292,7 @@ z-index: 10;
     @include responsive(phone)
     {   display:block;
         height:auto;
-        padding:2rem 1rem;
+        padding:2rem;
     }
 
      
@@ -345,7 +345,7 @@ z-index: 10;
     grid-template-columns: repeat(3,1fr);
     grid-gap:1.5rem;
     height:50rem;
-    padding-bottom:2rem;
+    padding:2rem;
      
     @include responsive (tab-landscape){padding:1rem;}
     @include responsive(tab-portrait){
@@ -387,6 +387,7 @@ z-index: 10;
        align-self: center;
        color:$font-color;
        grid-column:3/4;
+       padding:2rem;
        position: relative;
        @include animation-properties;
 
@@ -437,9 +438,8 @@ padding:3rem;
     @include responsive(phone){margin-bottom:3rem;padding:0;}
 }
 
-&__flooring { @include responsive(tab-portrait){grid-column: 1/5;}&--content{text-align: left;}}
-&__window { &--content{text-align: left;}}
-&__wallpaper { &--content{text-align: left;}}
+&__flooring { @include responsive(tab-portrait){grid-column: 1/5;}}
+
 }
 
 .span{
@@ -568,7 +568,7 @@ margin:1rem auto;
 @include responsive(phone){transform:skew(0);width:90%;}
 
 & > * {
-    transform: skew(15deg);
+     transform: skew(15deg);
     @include responsive(tab-portrait){
         transform:skew(0);
     }
@@ -577,20 +577,15 @@ margin:1rem auto;
         transform:skew(0);
     }
 }
-&:nth-child(3) > &--figure {
-float:right;   
-}
 
-
-&:nth-child(3) > &--first > * {
-    text-align: right;
-
-    }
+&:nth-child(3) > &--figure {float:right;margin-right:0;margin-left: 5rem;}
+&:nth-child(3) > &--first > * {text-align:right;}
 
 &--figure{    
 float: left;
 shape-outside: circle();
-margin-right:2rem;
+margin-right:5rem;
+
 
     & img{
         height:10rem;
@@ -601,10 +596,11 @@ margin-right:2rem;
 }//end of figure
 
 &--first{
-
+    text-align:left;
     font-size: 1.3rem;
+     
     &--title{
-        text-align: left;
+        text-align: center;
         font-size: 2.7rem;
 
 
