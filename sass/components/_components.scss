@@ -8,7 +8,7 @@
 
 
 .showcase{
-    background-image:linear-gradient(to right bottom , rgba($p-light, 0.6) , rgba($p-dark , 0.5)) ,url('../../assets/images/showcase2.jpeg');
+    background-image:linear-gradient(to right bottom , rgba($p-light, 0.5) , rgba($p-dark , 0.3)) ,url('../../assets/images/showcase2.jpeg');
     background-position:top;
     background-size: cover;
     background-attachment: fixed;  
@@ -312,18 +312,20 @@ z-index: 10;
       @include responsive(tab-portrait){
         margin-bottom:0.5rem;
         padding:0;
+        text-align: center;
     }
 
       @include responsive(phone){
           margin-bottom:0.5rem;
-          padding:0;
+          padding:2rem;
+          text-align: center;
       }
   }
 
   &__image{
       background-position:center;
       background-size: cover;  
-      background-image:linear-gradient(to right bottom , rgba($color-primary , 0.5) , rgba($p-dark , 0.5)) ,  url('../../assets/images/story4.jpg');
+      background-image:linear-gradient(to right bottom , rgba($color-primary , 0.4) , rgba($p-dark , 0.5)) ,  url('../../assets/images/story4.jpg');
       box-shadow: 10px 10px  30px -12px $p-dark;
       grid-column:2/4;
       max-height:100%;
@@ -345,7 +347,7 @@ z-index: 10;
     grid-template-columns: repeat(3,1fr);
     grid-gap:1.5rem;
     height:50rem;
-    padding-bottom:2rem;
+    padding:2rem;
      
     @include responsive (tab-landscape){padding:1rem;}
     @include responsive(tab-portrait){
@@ -359,13 +361,13 @@ z-index: 10;
     @include responsive(phone){
        display:block;
        height:auto;
-       padding:2rem 1rem;
+       padding:2rem;
     }
 
 
     &__image{
 
-        background-image: linear-gradient(to right bottom , rgba($color-primary , 0.5) , rgba($p-dark , 0.5)) , url('../assets/images/unique.jpeg');
+        background-image: linear-gradient(to right bottom , rgba($color-primary , 0.4) , rgba($p-dark , 0.5)) , url('../assets/images/unique.jpeg');
         background-position:center;
         background-size: cover; 
         background-repeat: no-repeat;
@@ -388,11 +390,12 @@ z-index: 10;
        color:$font-color;
        grid-column:3/4;
        position: relative;
+       padding:2rem;
        @include animation-properties;
 
 
-       @include responsive(tab-portrait){grid-column: 2/3;align-self: start;}
-       @include responsive(phone){ margin-top:1rem;}
+       @include responsive(tab-portrait){grid-column: 2/3;align-self: start; text-align: center;}
+       @include responsive(phone){ margin-top:1rem;text-align: center;}
 
    }
 
@@ -437,9 +440,8 @@ padding:3rem;
     @include responsive(phone){margin-bottom:3rem;padding:0;}
 }
 
-&__flooring { @include responsive(tab-portrait){grid-column: 1/5;}&--content{text-align: left;}}
-&__window { &--content{text-align: left;}}
-&__wallpaper { &--content{text-align: left;}}
+&__flooring { @include responsive(tab-portrait){grid-column: 1/5;}}
+
 }
 
 .span{
@@ -461,13 +463,13 @@ padding:3rem;
         color:$font-color;
         opacity:0;
         padding:4rem;
+        text-align: center;
         @include animation-properties;
         
         @include responsive(tab-portrait){margin:15rem auto;border:none;}
         @include responsive(phone){ 
             border:none;
             margin:15rem auto;
-            
             width:80%;
         }
 
@@ -475,13 +477,16 @@ padding:3rem;
             background:$p-dark;
             padding:0.5rem;
         }
-
+/*
+        &--content{
+            text-align: center;}
+*/
         & .btn-gallery {
             border:none;
             box-shadow:$shadow; 
              position: relative;
              transition:transform 0.1s ease-in;
-
+             
             &::after{
                 content:"";
                 background:$p-dark;
@@ -577,15 +582,8 @@ margin:1rem auto;
         transform:skew(0);
     }
 }
-&:nth-child(3) > &--figure {
-float:right;   
-}
-
-
-&:nth-child(3) > &--first > * {
-    text-align: right;
-
-    }
+&:nth-child(3) > &--figure {float:right;margin-right:0;margin-left:2rem;}
+&:nth-child(3) > &--first > * {text-align: right;}
 
 &--figure{    
 float: left;
