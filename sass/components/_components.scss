@@ -11,18 +11,11 @@
     background-image:-webkit-linear-gradient(to right bottom , rgba($p-light, 0.5) , rgba($p-dark , 0.3)) ,url('../assets/images/showcase2.jpeg');
 
     background-image:linear-gradient(to right bottom , rgba($p-light, 0.5) , rgba($p-dark , 0.3)) ,url('../assets/images/showcase2.jpeg');
-<<<<<<< HEAD
-
-    background-position:top;
-    background-size: cover;
-   position:relative;
-=======
     -webkit-background-image:linear-gradient(to right bottom , rgba($p-light, 0.5) , rgba($p-dark , 0.3)) ,url('../assets/images/showcase2.jpeg');
     background-position:top;
     background-size: cover;
     //background-attachment: fixed;  
     overflow: hidden;
->>>>>>> fixing_elements
     height:100vh;
     position:relative;
     top:0;

@@ -167,13 +167,11 @@ big-screen
 .showcase {
   background-image: -webkit-linear-gradient(to right bottom, rgba(98, 114, 123, 0.5), rgba(16, 32, 39, 0.3)), url("../assets/images/showcase2.jpeg");
   background-image: linear-gradient(to right bottom, rgba(98, 114, 123, 0.5), rgba(16, 32, 39, 0.3)), url("../assets/images/showcase2.jpeg");
+  -webkit-background-image: linear-gradient(to right bottom, rgba(98, 114, 123, 0.5), rgba(16, 32, 39, 0.3)), url("../assets/images/showcase2.jpeg");
   background-position: top;
   background-size: cover;
-<<<<<<< HEAD
-=======
   overflow: hidden;
   height: 100vh;
->>>>>>> fixing_elements
   position: relative;
   top: 0; }
   .showcase__header {
