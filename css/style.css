@@ -365,7 +365,7 @@ big-screen
   position: fixed;
   top: 0;
   width: 0;
-  z-index: 10;
+  z-index: 500;
   animation-duration: 0.2s;
   animation-fill-mode: both; }
   .sidenav-container {
