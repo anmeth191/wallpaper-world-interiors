@@ -60,7 +60,9 @@ let messageCompany = document.querySelector('#messageCompany');
 window.onscroll = function(){
      
     if(this.pageYOffset > 10 ){
-        header.style.backgroundColor="#37474f";     
+        header.style.backgroundColor="#37474f"; 
+        header.style.zIndex="200";     
+    
     }
     else {
         header.style.backgroundColor="transparent";

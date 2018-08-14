@@ -169,8 +169,13 @@ big-screen
   background-image: linear-gradient(to right bottom, rgba(98, 114, 123, 0.5), rgba(16, 32, 39, 0.3)), url("../assets/images/showcase2.jpeg");
   background-position: top;
   background-size: cover;
+<<<<<<< HEAD
+=======
+  overflow: hidden;
+  height: 100vh;
+>>>>>>> fixing_elements
   position: relative;
-  height: 100vh; }
+  top: 0; }
   .showcase__header {
     background: transparent;
     margin: 0 auto;
@@ -178,8 +183,7 @@ big-screen
     position: fixed;
     top: 0;
     transition: background 0.2s ease-in;
-    width: 100%;
-    z-index: 10; }
+    width: 100%; }
     @media (max-width: 75em) {
       .showcase__header {
         padding: 1rem; } }
@@ -270,10 +274,12 @@ big-screen
     clear: both; }
   .showcase__content {
     left: 50%;
-    position: absolute;
+    position: relative;
     top: 50%;
     transform: translate(-50%, -50%);
-    text-align: center; }
+    text-align: center;
+    transition: top 0.2s ease;
+    backface-visibility: hidden; }
     @media (max-width: 75em) {
       .showcase__content {
         width: 100%; } }
@@ -408,7 +414,9 @@ big-screen
   grid-auto-rows: minmax(20rem, auto);
   grid-gap: 1.5rem;
   height: 50rem;
-  padding: 2rem; }
+  padding: 2rem;
+  z-index: 100;
+  position: relative; }
   @media (max-width: 75em) {
     .story {
       height: auto;
@@ -426,10 +434,10 @@ big-screen
   .story__content {
     align-self: center;
     backface-visibility: hidden;
+    position: relative;
     color: #ffffff;
     grid-column: 1/2;
     padding: 2rem;
-    position: relative;
     animation-duration: 0.8s;
     animation-fill-mode: both;
     animation-timing-function: ease-in-out;
@@ -473,7 +481,10 @@ big-screen
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
   height: 50rem;
-  padding: 2rem; }
+  padding: 2rem;
+  position: relative;
+  z-index: 200;
+  overflow: hidden; }
   @media (max-width: 75em) {
     .unique {
       padding: 1rem; } }
