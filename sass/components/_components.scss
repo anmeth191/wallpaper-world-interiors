@@ -10,6 +10,8 @@
 .showcase{
     background-image:-webkit-linear-gradient(to right bottom , rgba($p-light, 0.5) , rgba($p-dark , 0.3)) ,url('../assets/images/showcase2.jpeg');
 
+    background-image:linear-gradient(to right bottom , rgba($p-light, 0.5) , rgba($p-dark , 0.3)) ,url('../assets/images/showcase2.jpeg');
+
     background-position:top;
     background-size: cover;
    position:relative;
