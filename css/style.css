@@ -168,9 +168,15 @@ big-screen
   background-image: -webkit-linear-gradient(to right bottom, rgba(98, 114, 123, 0.5), rgba(16, 32, 39, 0.3)), url("../assets/images/showcase2.jpeg");
   background-position: top;
   background-size: cover;
-  background-attachment: webkit-fixed;
+  background-attachment: fixed;
   position: relative;
   height: 100vh; }
+  @media (max-width: 56.25em) {
+    .showcase {
+      background-attachment: initial; } }
+  @media (max-width: 37.5em) {
+    .showcase {
+      background-attachment: initial; } }
   .showcase__header {
     background: transparent;
     margin: 0 auto;
