@@ -12,18 +12,10 @@
 
     background-position:top;
     background-size: cover;
-    background-attachment:fixed;  
    position:relative;
     height:100vh;
  
-    @include responsive(tab-portrait){
-        background-attachment:none;
-    }
-    
-    @include responsive(phone){
-        background-attachment:none;
-    }
-
+ 
 
 
     &__header{
@@ -469,7 +461,7 @@ padding:3rem;
 
 .span{
     background-image: linear-gradient(to right , rgba($color-primary , 0.5) , rgba($p-light , 0.8)) , url('../assets/images/span-large2x.jpeg');
-    background-attachment: fixed;
+    
     background-position: center;
     background-size: cover;
     display:grid;

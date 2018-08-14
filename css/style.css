@@ -168,15 +168,8 @@ big-screen
   background-image: -webkit-linear-gradient(to right bottom, rgba(98, 114, 123, 0.5), rgba(16, 32, 39, 0.3)), url("../assets/images/showcase2.jpeg");
   background-position: top;
   background-size: cover;
-  background-attachment: fixed;
   position: relative;
   height: 100vh; }
-  @media (max-width: 56.25em) {
-    .showcase {
-      background-attachment: none; } }
-  @media (max-width: 37.5em) {
-    .showcase {
-      background-attachment: none; } }
   .showcase__header {
     background: transparent;
     margin: 0 auto;
@@ -578,7 +571,6 @@ big-screen
 
 .span {
   background-image: linear-gradient(to right, rgba(55, 71, 79, 0.5), rgba(98, 114, 123, 0.8)), url("../assets/images/span-large2x.jpeg");
-  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   display: grid;
