@@ -17,11 +17,11 @@
     height:100vh;
  
     @include responsive(tab-portrait){
-        background-attachment: initial;
+        background-attachment:none;
     }
     
     @include responsive(phone){
-        background-attachment: initial;
+        background-attachment:none;
     }
 
 

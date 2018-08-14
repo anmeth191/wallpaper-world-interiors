@@ -173,10 +173,10 @@ big-screen
   height: 100vh; }
   @media (max-width: 56.25em) {
     .showcase {
-      background-attachment: initial; } }
+      background-attachment: none; } }
   @media (max-width: 37.5em) {
     .showcase {
-      background-attachment: initial; } }
+      background-attachment: none; } }
   .showcase__header {
     background: transparent;
     margin: 0 auto;
