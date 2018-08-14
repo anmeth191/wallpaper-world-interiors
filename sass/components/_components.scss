@@ -10,12 +10,13 @@
 .showcase{
     background-image:linear-gradient(to right bottom , rgba($p-light, 0.5) , rgba($p-dark , 0.3)) ,url('../assets/images/showcase2.jpeg');
     -webkit-background-image:linear-gradient(to right bottom , rgba($p-light, 0.5) , rgba($p-dark , 0.3)) ,url('../assets/images/showcase2.jpeg');
-
     background-position:top;
     background-size: cover;
-    background-attachment: fixed;  
-    position:relative;
+    //background-attachment: fixed;  
+    overflow: hidden;
     height:100vh;
+    position:relative;
+    top:0;
  
     
     
@@ -28,7 +29,7 @@
         top:0;
         transition: background 0.2s ease-in;
         width:100%;
-        z-index: 10;
+    
 
        @include responsive(tab-landscape){padding:1rem;}
         @include responsive(tab-portrait){padding:1rem;}
@@ -127,10 +128,12 @@
 
     &__content{
         left:50%;
-        position:absolute;
+        position:relative;
         top:50%;
         transform: translate(-50% , -50%);
         text-align: center;
+        transition:top 0.2s ease;
+        backface-visibility: hidden;
 
         @include responsive(tab-landscape){width:100%;}
         @include responsive(tab-portrait){width:100%;}
@@ -288,6 +291,8 @@ animation-fill-mode: both;
     grid-gap:1.5rem;
     height:50rem;
     padding:2rem;
+    z-index: 100;
+    position: relative;
     
     @include responsive(tab-landscape){
         height:auto;
@@ -313,10 +318,10 @@ animation-fill-mode: both;
   &__content{
       align-self: center;
       backface-visibility: hidden;
+      position: relative;
       color:$font-color;
       grid-column:1/2;
       padding:2rem;
-      position: relative;
       @include animation-properties;
        
       @include responsive(tab-landscape){padding:1rem;}
@@ -364,6 +369,10 @@ animation-fill-mode: both;
     grid-gap:1.5rem;
     height:50rem;
     padding:2rem;
+    position: relative;
+    z-index: 200;
+    overflow: hidden;
+
      
     @include responsive (tab-landscape){padding:1rem;}
     @include responsive(tab-portrait){
