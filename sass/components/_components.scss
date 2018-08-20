@@ -224,11 +224,7 @@ left:0;
 position:fixed;
 top:0;
 width:0;
-<<<<<<< HEAD
-z-index: 500;
-=======
 z-index: 1000;
->>>>>>> fixing_elements
 animation-duration: 0.2s;
 animation-fill-mode: both;
 
@@ -480,11 +476,8 @@ padding:3rem;
 .span{
     background-image: linear-gradient(to right , rgba($color-primary , 0.5) , rgba($p-light , 0.8)) , url('../assets/images/span-large2x.jpeg');
     
-<<<<<<< HEAD
-=======
     -webkit-background-image: linear-gradient(to right , rgba($color-primary , 0.5) , rgba($p-light , 0.8)) , url('../assets/images/span-large2x.jpeg');
     //background-attachment: fixed;
->>>>>>> fixing_elements
     background-position: center;
     background-size: cover;
     background-repeat: none;
