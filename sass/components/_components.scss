@@ -24,14 +24,15 @@
 
 
     &__header{
-        background:transparent;
+        background:$color-primary;
         margin:0 auto;
         left:0;
+        padding:0.5rem;
         position:fixed;
         top:0;
-        transition: background 0.2s ease-in;
+        transition: height 0.2s ease-in;
         width:100%;
-    
+
 
        @include responsive(tab-landscape){padding:1rem;}
         @include responsive(tab-portrait){padding:1rem;}

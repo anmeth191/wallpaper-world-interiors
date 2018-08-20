@@ -9,9 +9,6 @@ window.addEventListener('scroll' , parallaxEffect);
 
 
 function parallaxEffect(e){
-
 let scrollEvent = window.pageYOffset;
-
 showcase.style.top = Math.round(scrollEvent/2)+'px';
-showcase__content.style.top = 376-(scrollEvent * 0.1)+'px';
 }

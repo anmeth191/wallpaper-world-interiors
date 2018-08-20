@@ -175,12 +175,13 @@ big-screen
   position: relative;
   top: 0; }
   .showcase__header {
-    background: transparent;
+    background: #37474f;
     margin: 0 auto;
     left: 0;
+    padding: 0.5rem;
     position: fixed;
     top: 0;
-    transition: background 0.2s ease-in;
+    transition: height 0.2s ease-in;
     width: 100%; }
     @media (max-width: 75em) {
       .showcase__header {
