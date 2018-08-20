@@ -372,7 +372,7 @@ animation-fill-mode: both;
     height:50rem;
     padding:2rem;
     position: relative;
-    z-index: 200;
+    z-index: 100;
     overflow: hidden;
 
      
@@ -675,7 +675,7 @@ padding:1rem;
 
     
 & .contactForm{
-    width:80%;
+    width:50%;
     margin:0 auto;
    
     @include responsive(tab-landscape)
@@ -726,8 +726,8 @@ padding:1rem;
         & .form-button{
             background:$p-light;
             border:0.2rem solid $font-color;
-
-        
+             &:hover{cursor:pointer;}
+             
 
             @include responsive(tab-portrait){
                 width:100%;

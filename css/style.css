@@ -481,7 +481,7 @@ big-screen
   height: 50rem;
   padding: 2rem;
   position: relative;
-  z-index: 200;
+  z-index: 100;
   overflow: hidden; }
   @media (max-width: 75em) {
     .unique {
@@ -782,7 +782,7 @@ big-screen
       height: auto;
       padding: 1rem; } }
   .contact .contactForm {
-    width: 80%;
+    width: 50%;
     margin: 0 auto; }
     @media (max-width: 75em) {
       .contact .contactForm {
@@ -816,6 +816,8 @@ big-screen
       .contact .contactForm .form-group .form-button {
         background: #62727b;
         border: 0.2rem solid #ffffff; }
+        .contact .contactForm .form-group .form-button:hover {
+          cursor: pointer; }
         @media (max-width: 56.25em) {
           .contact .contactForm .form-group .form-button {
             width: 100%; } }
