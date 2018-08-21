@@ -16,11 +16,10 @@ function parallaxEffect(e){
 let scrollEvent = window.pageYOffset;
 
 showcase.style.top = (scrollEvent/2)+'px';
-showcase__content.style.top = 376-(scrollEvent * 0.1)+'px';
 
-if(pageYOffset > (spanC.offsetTop-700) && pageYOffset < limitSpan)
+if(pageYOffset > (spanC.offsetTop-1000) && pageYOffset < (limitSpan+500))
 {
-    spanC.style.backgroundPositionY = (scrollEvent/1.4)+'px';
+    spanC.style.backgroundPositionY = (scrollEvent*1.1)+'px';
 }
 else
 {

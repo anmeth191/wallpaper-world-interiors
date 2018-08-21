@@ -103,3 +103,31 @@ label{
 .clearfloat{
     clear: both;
 }
+
+.linkStyle::after{
+    content:'';
+    background:$font-color-title;
+    height:0.5rem;
+    width:80%;
+    position:absolute;
+    bottom:10%;
+    left:10%;
+    animation-name: linksAnimation;
+                   animation-duration: 0.2s;
+                   animation-fill-mode: both;
+                   animation-timing-function: ease-in;
+}
+
+.linkStyles::after{
+    content:'';
+    background:$font-color-title;
+    height:0.5rem;
+    width:80%;
+    position:absolute;
+    bottom:10%;
+    left:10%;
+    animation-name: linksAnimation;
+                   animation-duration: 0.2s;
+                   animation-fill-mode: both;
+                   animation-timing-function: ease-in;
+}

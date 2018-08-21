@@ -1,4 +1,6 @@
 
+
+
 //header functions animatios
 
 let header = document.querySelector('#header');
@@ -343,3 +345,50 @@ function focusField(e){
 function blurField(e){
    e.target.previousElementSibling.style.fontSize="1.5rem";
 }
+
+//variables and events for the links in the navbar 
+
+
+let linkA= [...document.querySelectorAll('.linksA')]  , i = 0;
+linkA.forEach((elements) => {
+elements.addEventListener('click' , (event)=> {
+for(i of linkA){
+if(i === event.target){i.classList.add('linkStyle');}  else {i.classList.remove('linkStyle');
+
+
+}
+}//end of the for loop  
+})//end of the click function
+})//end of the forEach
+
+let story = document.querySelector('#story') , 
+testimonials = document.querySelector('#testimonials');
+
+console.log(story.offsetTop);
+
+window.addEventListener('scroll' , (e)=> {
+
+if(pageYOffset >= 0 && pageYOffset < story.offsetTop-80 )
+{linkA[0].classList.add('linkStyle')}else{linkA[0].classList.remove('linkStyle')}
+
+if(pageYOffset > story.offsetTop-100 && pageYOffset < services.offsetTop-80 )
+{linkA[1].classList.add('linkStyle')}else{linkA[1].classList.remove('linkStyle')}
+
+if(pageYOffset > services.offsetTop-100 && pageYOffset < testimonials.offsetTop-80 ){linkA[2].classList.add('linkStyle')}else{linkA[2].classList.remove('linkStyle')}
+
+
+
+
+if(pageYOffset > testimonials.offsetTop-100 && pageYOffset < contact.offsetTop-80){linkA[3].classList.add('linkStyle')}else{linkA[3].classList.remove('linkStyle');}
+
+
+if(pageYOffset > contact.offsetTop-80){linkA[4].classList.add('linkStyle')}
+else
+if(pageYOffset < contact.offsetTop){linkA[4].classList.remove('linkStyle')}
+
+
+
+})
+
+
+
