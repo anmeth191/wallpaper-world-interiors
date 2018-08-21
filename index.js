@@ -62,12 +62,12 @@ let messageCompany = document.querySelector('#messageCompany');
 window.onscroll = function(){
      
     if(this.pageYOffset > 10 ){
-        header.style.height="6rem"; 
+        header.style.height="8%"; 
         header.style.zIndex="200";     
     
     }
     else {
-        header.style.height="8rem";
+        header.style.height="8.5%";
     }
 
 

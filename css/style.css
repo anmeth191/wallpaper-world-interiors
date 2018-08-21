@@ -229,22 +229,29 @@ big-screen
           width: 90%; } }
     .showcase__header__navbar--logo {
       float: left;
-      margin-top: 1rem; }
+      margin-top: 1%; }
       .showcase__header__navbar--logo img {
         object-fit: contain;
-        height: 5rem;
+        height: 4rem;
         width: 100%; }
         @media (max-width: 75em) {
           .showcase__header__navbar--logo img {
-            height: 4rem; } }
+            height: 3rem;
+            float: left; } }
         @media (max-width: 56.25em) {
           .showcase__header__navbar--logo img {
-            height: 4rem; } }
+            height: 3rem;
+            float: left; } }
+        @media (max-width: 37.5em) {
+          .showcase__header__navbar--logo img {
+            height: 4.5rem;
+            float: left; } }
     .showcase__header__navbar--burger {
       background: transparent;
       opacity: 0;
-      float: right;
-      padding: 0.5rem; }
+      position: absolute;
+      top: 2%;
+      right: 5%; }
       .showcase__header__navbar--burger:hover {
         cursor: pointer; }
       .showcase__header__navbar--burger .bar1, .showcase__header__navbar--burger .bar2, .showcase__header__navbar--burger .bar3 {
@@ -260,8 +267,7 @@ big-screen
           padding: 1rem 3rem; } }
       @media (max-width: 37.5em) {
         .showcase__header__navbar--burger {
-          opacity: 1;
-          margin-top: 0.8rem; } }
+          opacity: 1; } }
     .showcase__header__navbar--links {
       float: right;
       margin-top: 0.5rem; }
