@@ -66,7 +66,7 @@
                 height:4rem;
                 width: 100%;
              
-                @include responsive(tab-landscape){height:6rem;}
+                @include responsive(tab-landscape){height:4rem;}
                 @include responsive(tab-portrait){height:7rem;}
                 @include responsive(phone){height:6rem}
 

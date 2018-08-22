@@ -251,7 +251,7 @@ big-screen
         width: 100%; }
         @media (max-width: 75em) {
           .showcase__header__navbar--logo img {
-            height: 6rem; } }
+            height: 4rem; } }
         @media (max-width: 56.25em) {
           .showcase__header__navbar--logo img {
             height: 7rem; } }
