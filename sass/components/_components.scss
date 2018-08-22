@@ -25,6 +25,7 @@
 
     &__header{
         background:$color-primary;
+      
         height: 8.5%;
         margin:0 auto;
         left:0;
@@ -41,29 +42,33 @@
 
 
 &__navbar{
+    display:grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows:6rem;
+    height:100%;
     margin:0 auto;
     width:80%;
-    height:100%;
     @include responsive(tab-landscape){width:90%;}
     @include responsive(tab-portrait){width:90%;}
 }
         &__navbar--logo{
-            position:absolute;
-            left:10%;
-            top:30%;
-           // margin-top:1%;
             
-         @include responsive(tab-portrait){ left:10%;top:30%;}
-         @include responsive(phone){ left:1%;top:30%;}
+            align-self: center;
+            justify-self: start;
+            width:100%;
+           // margin-top:1%;
+         @include responsive(tab-landscape){width:80%; }   
+         @include responsive(tab-portrait){width:50%}
+         @include responsive(phone){width:60%;}
 
             & img {
                 object-fit: contain;
                 height:4rem;
                 width: 100%;
              
-                @include responsive(tab-landscape){height:3rem;left:5%;}
-                @include responsive(tab-portrait){height:3rem;left:5%;}
-                @include responsive(phone){height:4.5rem;left:5%;}
+                @include responsive(tab-landscape){height:6rem;}
+                @include responsive(tab-portrait){height:7rem;}
+                @include responsive(phone){height:6rem}
 
                 
             }
@@ -74,9 +79,10 @@
         
         &__navbar--burger{
             
+            align-self: center;
             background:transparent;
+            justify-self: end;
             opacity:0;
-            position:absolute;
             &:hover{cursor: pointer;}
 
             
@@ -93,8 +99,8 @@
 
 }
         &__navbar--links{
-            float:right;
-            margin-top:0.5rem;
+           justify-self: end;
+           align-self: center;
             
                
           @include responsive(tab-portrait){ display:none; } 
@@ -105,11 +111,11 @@
                float:left;
                font-size:1.5rem;
                list-style: none;
-               padding:2rem;
+               padding:1rem;
                position: relative;
               
              
-               @include responsive(tab-landscape){padding:1rem;}
+               @include responsive(tab-landscape){padding:0.5rem;}
 
                //&:hover{background:$font-color-title;cursor: pointer;}
                &:hover::before{

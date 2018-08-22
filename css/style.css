@@ -220,9 +220,12 @@ big-screen
       .showcase__header {
         padding: 1rem; } }
     .showcase__header__navbar {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: 6rem;
+      height: 100%;
       margin: 0 auto;
-      width: 80%;
-      height: 100%; }
+      width: 80%; }
       @media (max-width: 75em) {
         .showcase__header__navbar {
           width: 90%; } }
@@ -230,37 +233,36 @@ big-screen
         .showcase__header__navbar {
           width: 90%; } }
     .showcase__header__navbar--logo {
-      position: absolute;
-      left: 10%;
-      top: 30%; }
+      align-self: center;
+      justify-self: start;
+      width: 100%; }
+      @media (max-width: 75em) {
+        .showcase__header__navbar--logo {
+          width: 80%; } }
       @media (max-width: 56.25em) {
         .showcase__header__navbar--logo {
-          left: 10%;
-          top: 30%; } }
+          width: 50%; } }
       @media (max-width: 37.5em) {
         .showcase__header__navbar--logo {
-          left: 1%;
-          top: 30%; } }
+          width: 60%; } }
       .showcase__header__navbar--logo img {
         object-fit: contain;
         height: 4rem;
         width: 100%; }
         @media (max-width: 75em) {
           .showcase__header__navbar--logo img {
-            height: 3rem;
-            left: 5%; } }
+            height: 6rem; } }
         @media (max-width: 56.25em) {
           .showcase__header__navbar--logo img {
-            height: 3rem;
-            left: 5%; } }
+            height: 7rem; } }
         @media (max-width: 37.5em) {
           .showcase__header__navbar--logo img {
-            height: 4.5rem;
-            left: 5%; } }
+            height: 6rem; } }
     .showcase__header__navbar--burger {
+      align-self: center;
       background: transparent;
-      opacity: 0;
-      position: absolute; }
+      justify-self: end;
+      opacity: 0; }
       .showcase__header__navbar--burger:hover {
         cursor: pointer; }
       .showcase__header__navbar--burger .bar1, .showcase__header__navbar--burger .bar2, .showcase__header__navbar--burger .bar3 {
@@ -280,8 +282,8 @@ big-screen
           top: 30%;
           right: 6%; } }
     .showcase__header__navbar--links {
-      float: right;
-      margin-top: 0.5rem; }
+      justify-self: end;
+      align-self: center; }
       @media (max-width: 56.25em) {
         .showcase__header__navbar--links {
           display: none; } }
@@ -292,11 +294,11 @@ big-screen
         float: left;
         font-size: 1.5rem;
         list-style: none;
-        padding: 2rem;
+        padding: 1rem;
         position: relative; }
         @media (max-width: 75em) {
           .showcase__header__navbar--links li {
-            padding: 1rem; } }
+            padding: 0.5rem; } }
         .showcase__header__navbar--links li:hover::before {
           content: '';
           bottom: 10%;
