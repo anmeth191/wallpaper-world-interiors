@@ -202,10 +202,11 @@ big-screen
   top: 0; }
   .showcase__header {
     background: #37474f;
+    height: 8.5%;
     margin: 0 auto;
     left: 0;
-    padding: 0.5rem;
     position: fixed;
+    padding: 1rem;
     top: 0;
     transition: height 0.5s ease-in;
     width: 100%; }
@@ -214,13 +215,14 @@ big-screen
         padding: 1rem; } }
     @media (max-width: 56.25em) {
       .showcase__header {
-        padding: 1rem; } }
+        padding: 1.5rem; } }
     @media (max-width: 37.5em) {
       .showcase__header {
         padding: 1rem; } }
     .showcase__header__navbar {
       margin: 0 auto;
-      width: 80%; }
+      width: 80%;
+      height: 100%; }
       @media (max-width: 75em) {
         .showcase__header__navbar {
           width: 90%; } }
@@ -229,8 +231,16 @@ big-screen
           width: 90%; } }
     .showcase__header__navbar--logo {
       position: absolute;
-      left: 5%;
-      top: 2rem; }
+      left: 10%;
+      top: 30%; }
+      @media (max-width: 56.25em) {
+        .showcase__header__navbar--logo {
+          left: 10%;
+          top: 30%; } }
+      @media (max-width: 37.5em) {
+        .showcase__header__navbar--logo {
+          left: 1%;
+          top: 30%; } }
       .showcase__header__navbar--logo img {
         object-fit: contain;
         height: 4rem;
@@ -250,9 +260,7 @@ big-screen
     .showcase__header__navbar--burger {
       background: transparent;
       opacity: 0;
-      position: absolute;
-      top: 1%;
-      right: 5%; }
+      position: absolute; }
       .showcase__header__navbar--burger:hover {
         cursor: pointer; }
       .showcase__header__navbar--burger .bar1, .showcase__header__navbar--burger .bar2, .showcase__header__navbar--burger .bar3 {
@@ -264,11 +272,13 @@ big-screen
       @media (max-width: 56.25em) {
         .showcase__header__navbar--burger {
           opacity: 1;
-          margin-top: 0.8rem;
-          padding: 1rem 3rem; } }
+          top: 30%;
+          right: 10%; } }
       @media (max-width: 37.5em) {
         .showcase__header__navbar--burger {
-          opacity: 1; } }
+          opacity: 1;
+          top: 30%;
+          right: 6%; } }
     .showcase__header__navbar--links {
       float: right;
       margin-top: 0.5rem; }

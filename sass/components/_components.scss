@@ -25,33 +25,36 @@
 
     &__header{
         background:$color-primary;
+        height: 8.5%;
         margin:0 auto;
         left:0;
-        padding:0.5rem;
         position:fixed;
+        padding:1rem;
         top:0;
         transition: height 0.5s ease-in;
         width:100%;
 
 
        @include responsive(tab-landscape){padding:1rem;}
-        @include responsive(tab-portrait){padding:1rem;}
+        @include responsive(tab-portrait){padding:1.5rem;}
         @include responsive(phone){padding:1rem;}
 
 
 &__navbar{
     margin:0 auto;
     width:80%;
+    height:100%;
     @include responsive(tab-landscape){width:90%;}
     @include responsive(tab-portrait){width:90%;}
 }
         &__navbar--logo{
             position:absolute;
-            left:5%;
-            top:2rem;
+            left:10%;
+            top:30%;
            // margin-top:1%;
             
-         
+         @include responsive(tab-portrait){ left:10%;top:30%;}
+         @include responsive(phone){ left:1%;top:30%;}
 
             & img {
                 object-fit: contain;
@@ -70,11 +73,10 @@
         
         
         &__navbar--burger{
+            
             background:transparent;
             opacity:0;
             position:absolute;
-            top:1%;
-            right:5%;
             &:hover{cursor: pointer;}
 
             
@@ -86,8 +88,8 @@
                 width:40px;}
 
              
-            @include responsive(tab-portrait){ opacity:1; margin-top:0.8rem;padding:1rem 3rem;  }
-              @include responsive(phone){opacity:1;}
+            @include responsive(tab-portrait){ opacity:1; top:30%;right:10%;}
+              @include responsive(phone){opacity:1;top:30%;right:6%;}
 
 }
         &__navbar--links{

@@ -66,7 +66,7 @@ window.onscroll = function(){
         header.style.zIndex="200";     
     
     }
-    else {
+    else if(this.pageYOffset <= 0) {
         header.style.height="8.5%";
     }
 
