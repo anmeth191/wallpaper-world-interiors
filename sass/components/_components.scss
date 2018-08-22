@@ -46,8 +46,10 @@
     @include responsive(tab-portrait){width:90%;}
 }
         &__navbar--logo{
-            float:left;
-            margin-top:1%;
+            position:absolute;
+            left:5%;
+            top:2rem;
+           // margin-top:1%;
             
          
 
@@ -56,9 +58,9 @@
                 height:4rem;
                 width: 100%;
              
-                @include responsive(tab-landscape){height:3rem; float:left;}
-                @include responsive(tab-portrait){height:3rem;float:left;}
-                @include responsive(phone){height:4.5rem;float:left;}
+                @include responsive(tab-landscape){height:3rem;left:5%;}
+                @include responsive(tab-portrait){height:3rem;left:5%;}
+                @include responsive(phone){height:4.5rem;left:5%;}
 
                 
             }

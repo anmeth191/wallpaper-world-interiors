@@ -228,8 +228,9 @@ big-screen
         .showcase__header__navbar {
           width: 90%; } }
     .showcase__header__navbar--logo {
-      float: left;
-      margin-top: 1%; }
+      position: absolute;
+      left: 5%;
+      top: 2rem; }
       .showcase__header__navbar--logo img {
         object-fit: contain;
         height: 4rem;
@@ -237,15 +238,15 @@ big-screen
         @media (max-width: 75em) {
           .showcase__header__navbar--logo img {
             height: 3rem;
-            float: left; } }
+            left: 5%; } }
         @media (max-width: 56.25em) {
           .showcase__header__navbar--logo img {
             height: 3rem;
-            float: left; } }
+            left: 5%; } }
         @media (max-width: 37.5em) {
           .showcase__header__navbar--logo img {
             height: 4.5rem;
-            float: left; } }
+            left: 5%; } }
     .showcase__header__navbar--burger {
       background: transparent;
       opacity: 0;
